@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜谜语</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>猜谜语</h1>
+        
+        <!-- 谜语区域 -->
+        <div class="riddle-container">
+            <div class="riddle-content">
+                <h3>谜面</h3>
+                <p id="riddleQuestion">点击开始按钮开始猜谜语</p>
+            </div>
+            <div class="riddle-answer" id="riddleAnswer" style="display: none;">
+                <h3>谜底</h3>
+                <p id="answerText"></p>
+            </div>
+            <button class="riddle-btn" id="startBtn">开始</button>
+            <button class="riddle-btn" id="showAnswerBtn" style="display: none;">查看答案</button>
+            <button class="riddle-btn" id="nextBtn" style="display: none;">下一题</button>
+        </div>
+    </div>
+
+    <!-- 子菜单和遮罩层 -->
+    <div class="overlay" id="overlay"></div>
+    <div class="submenu" id="submenu">
+        <div class="submenu-item" data-page="lottery.html">转盘抽奖</div>
+        <div class="submenu-item" data-page="riddle.html">猜谜语</div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-item">
+            <i class="bi bi-house"></i>
+            <span>首页</span>
+        </div>
+        <div class="nav-item" id="lotteryNav">
+            <i class="bi bi-gift"></i>
+            <span>抽奖</span>
+        </div>
+        <div class="nav-item">
+            <i class="bi bi-clock-history"></i>
+            <span>历史记录</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

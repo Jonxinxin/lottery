@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>抽奖</h1>
+        
+        <!-- 抽奖转盘区域 -->
+        <div class="wheel-container">
+            <div class="wheel">
+                <div class="prize-list">
+                    <div class="prize"><span>1等奖</span></div>
+                    <div class="prize"><span>2等奖</span></div>
+                    <div class="prize"><span>3等奖</span></div>
+                    <div class="prize"><span>4等奖</span></div>
+                    <div class="prize"><span>5等奖</span></div>
+                    <div class="prize"><span>6等奖</span></div>
+                    <div class="prize"><span>7等奖</span></div>
+                    <div class="prize"><span>8等奖</span></div>
+                    <div class="prize"><span>9等奖</span></div>
+                </div>
+                <div class="pointer-wrapper">
+                    <div class="pointer"></div>
+                </div>
+            </div>
+            <button class="draw-btn">立即抽奖</button>
+            <div class="pool-buttons">
+                <button class="custom-pool-btn" id="customPoolBtn">自定义奖池</button>
+                <button class="default-pool-btn" id="defaultPoolBtn">默认奖池</button>
+            </div>
+
+            <!-- 上次抽奖结果 -->
+            <div class="last-result">
+                <span>上次抽中：</span>
+                <span id="lastPrize">暂无</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 自定义奖池的弹窗 -->
+    <div class="custom-pool-modal" id="customPoolModal" style="display: none;">
+        <div class="custom-pool-content">
+            <h3>自定义奖池</h3>
+            <div class="prize-inputs" id="prizeInputs">
+                <div class="prize-input-group">
+                    <input type="text" placeholder="奖项名称" class="prize-name">
+                </div>
+                <div class="prize-input-group">
+                    <input type="text" placeholder="奖项名称" class="prize-name">
+                </div>
+            </div>
+            <button class="add-prize-btn" id="addPrizeBtn">新增一个</button>
+            <div class="custom-pool-btns">
+                <button class="save-btn" id="savePoolBtn">保存</button>
+                <button class="cancel-btn" id="cancelPoolBtn">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 子菜单和遮罩层 -->
+    <div class="overlay" id="overlay"></div>
+    <div class="submenu" id="submenu">
+        <div class="submenu-item" data-page="lottery.html">转盘抽奖</div>
+        <div class="submenu-item" data-page="riddle.html">猜谜语</div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-item">
+            <i class="bi bi-house"></i>
+            <span>首页</span>
+        </div>
+        <div class="nav-item active" id="lotteryNav">
+            <i class="bi bi-gift"></i>
+            <span>抽奖</span>
+        </div>
+        <div class="nav-item">
+            <i class="bi bi-clock-history"></i>
+            <span>历史记录</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
